@@ -11,11 +11,21 @@ function Footer() {
         <div className="footer-center">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/portfolio">Portfolio</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/about">About</a>
+            </li>
+            <li>
+              <a href="/services">Services</a>
+            </li>
+            <li>
+              <a href="/portfolio">Portfolio</a>
+            </li>
+            <li>
+              <a href="/contact">Contact</a>
+            </li>
           </ul>
         </div>
         <div className="footer-right">
@@ -23,19 +33,27 @@ function Footer() {
           <p>Email: example@example.com</p>
           <p>Phone: +1234567890</p>
           <div className="social-links">
-            <a href="#"><i className="fab fa-facebook-f"></i></a>
-            <a href="#"><i className="fab fa-twitter"></i></a>
-            <a href="#"><i className="fab fa-instagram"></i></a>
+            <a href="#">
+              <i className="fab fa-facebook-f"></i>
+            </a>
+            <a href="#">
+              <i className="fab fa-twitter"></i>
+            </a>
+            <a href="#">
+              <i className="fab fa-instagram"></i>
+            </a>
             {/* Add more social media links as needed */}
           </div>
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Your Company Name. All Rights Reserved.</p>
+        <p>
+          &copy; {new Date().getFullYear()} Your Company Name. All Rights
+          Reserved.
+        </p>
       </div>
     </footer>
   );
 }
 
 export default Footer;
-
