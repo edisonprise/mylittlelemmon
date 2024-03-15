@@ -4,7 +4,6 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
 
-
 function App() {
   return (
     <>
@@ -23,9 +22,9 @@ function App() {
           content="The image of the restaurant My little lemon is a yellow little lemon that represents the simplicity but richness of the mediterranean food that is offered in the restaurant My little lemon"
         />
       </Helmet>
-      <Header  />
+      <Header />
       <Main />
-      <Footer  />
+      <Footer />
     </>
   );
 }

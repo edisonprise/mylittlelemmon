@@ -1,11 +1,11 @@
 import React from "react";
 import LittleLemonLogo from "./images/littlelemonlogo.png";
-import "../styles/Nav.css"
+import "../styles/Nav.css";
 
 function Nav() {
   return (
     <nav className="nav-container">
-      <img src={LittleLemonLogo} alt="little lemon logo" className="logo"/>
+      <img src={LittleLemonLogo} alt="little lemon logo" className="logo" />
       <ul className="nav-list">
         <li>
           <a href="/">Home</a>
