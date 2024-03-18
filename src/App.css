@@ -7,6 +7,14 @@
   pointer-events: none;
 }
 
+.column {
+  flex: 0 0 calc(100% / 12); /* Establece el ancho de cada columna */
+  max-width: calc(100% / 12); /* Establece el ancho máximo de cada columna */
+  box-sizing: border-box; /* Incluye el relleno y el borde en el ancho */
+  padding: 10px; /* Agrega un relleno para separar las columnas */
+}
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

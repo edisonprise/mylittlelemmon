@@ -1,12 +1,14 @@
-import "./App.css";
+//import "./App.css";
 import { Helmet } from "react-helmet";
-import Header from "./components/Header";
-import Main from "./components/Main";
-import Footer from "./components/Footer";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Container, Row, Col } from "react-bootstrap";
+import Header from "./components/Header.js";
+import Main from "./components/Main.js";
+import Footer from "./components/Footer.js";
 
 function App() {
   return (
-    <>
+    <div className="App">
       <Helmet>
         <meta
           name="description"
@@ -22,10 +24,24 @@ function App() {
           content="The image of the restaurant My little lemon is a yellow little lemon that represents the simplicity but richness of the mediterranean food that is offered in the restaurant My little lemon"
         />
       </Helmet>
-      <Header />
-      <Main />
-      <Footer />
-    </>
+      <Container fluid>
+        <Row>
+          <Col>
+            <Header />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Main />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Footer />
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 }
 

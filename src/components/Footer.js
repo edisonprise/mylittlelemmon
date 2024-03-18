@@ -33,13 +33,13 @@ function Footer() {
           <p>Email: example@example.com</p>
           <p>Phone: +1234567890</p>
           <div className="social-links">
-            <a href="#">
+            <a href="https://www.facebook.com/profile.php?id=61556098121457">
               <i className="fab fa-facebook-f"></i>
             </a>
-            <a href="#">
+            <a href="https://twitter.com/edisonthemaster">
               <i className="fab fa-twitter"></i>
             </a>
-            <a href="#">
+            <a href="https://www.instagram.com/">
               <i className="fab fa-instagram"></i>
             </a>
             {/* Add more social media links as needed */}

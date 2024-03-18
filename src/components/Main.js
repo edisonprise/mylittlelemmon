@@ -1,7 +1,12 @@
 import React from "react";
+import MyMainContent from "../elements/Main.jsx";
 
 const Main = () => {
-  return <div>Main</div>;
+  return (
+    <div>
+      <MyMainContent />
+    </div>
+  );
 };
 
 export default Main;

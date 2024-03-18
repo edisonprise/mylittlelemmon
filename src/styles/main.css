@@ -1,0 +1,55 @@
+/* main.css */
+
+.main-container {
+    position: relative;
+  }
+  
+
+  .background {
+    background-color: #495e57;
+    color: white;
+    padding-left: 100px; /* Ajusta el padding izquierdo según sea necesario */
+    padding-right: 100px; /* Ajusta el padding derecho según sea necesario */
+    font-size: 20px;
+    width: 100%; /* Haz que el fondo ocupe todo el ancho disponible */
+    height: 400px; /* Ajusta la altura del fondo según sea necesario */
+    display: flex; /* Usamos flexbox para alinear los elementos */
+    flex-direction: column; /* Alineamos los elementos verticalmente */
+    justify-content: flex-start; /* Centramos verticalmente los elementos */
+    align-items: flex-start; /* Centramos horizontalmente los elementos */
+  }
+  
+  h1 {
+    font-size: 60px;
+    margin-top: 30px;
+    margin-left: 370px;
+    margin-bottom: 5px;
+    color: #f4ce14;
+  }
+  
+  h2 {
+    font-size: 40px;
+    margin-left: 370px;
+    color: white;
+    margin-top: -10px;
+  }
+  
+  .para-container {
+    margin-top: 10px;
+    max-height: 6em;
+    overflow-y: auto;
+    margin-left: 370px;
+  }
+  
+  .para {
+    display: -webkit-box; /* Establece el modelo de caja flexible de diseño */
+    -webkit-line-clamp: 6; /* Establece el número máximo de líneas a mostrar */
+    -webkit-box-orient: horizontal; /* Establece la dirección del eje principal */
+    overflow: hidden; /* Oculta el desbordamiento del contenido */
+    text-wrap: wrap;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  

@@ -1,6 +1,6 @@
 import React from "react";
-import LittleLemonLogo from "./images/littlelemonlogo.png";
-import "../styles/Nav.css";
+import LittleLemonLogo from "../images/littlelemonlogo.png";
+import "../styles/nav.css";
 
 function Nav() {
   return (
