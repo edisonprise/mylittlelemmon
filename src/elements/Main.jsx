@@ -41,7 +41,7 @@ function Main() {
         </Container>
       </div>
       <div className="content">
-        <Container>
+        <Container fluid>
           <Row>
             <Col>
               <h4 className="specials">This Weeks Specials!</h4>
@@ -66,14 +66,10 @@ function Main() {
                           ac leo id,
                         </span>
                       </div>
-                      <p className="delivery">
-                        <img
-                          src={deliveryIcon}
-                          alt="delivery"
-                          className="delivery-icon"
-                        />
-                        Order a delivery
-                      </p>
+                      <p className="delivery">Order a delivery</p>
+                    </div>
+                    <div className="delivery-icon">
+                      <img src={deliveryIcon} alt="delivery" />
                     </div>
                     <div className="card">
                       <img src={bruschetta} alt="bruscheta" />
@@ -92,14 +88,10 @@ function Main() {
                           ac leo id,
                         </span>
                       </div>
-                      <p className="delivery">
-                        <img
-                          src={deliveryIcon}
-                          alt="delivery"
-                          className="delivery-icon"
-                        />
-                        Order a delivery
-                      </p>
+                      <p className="delivery">Order a delivery</p>
+                    </div>
+                    <div className="delivery-icon">
+                      <img src={deliveryIcon} alt="delivery" />
                     </div>
                     <div className="card">
                       <img src={lemondessert} alt="lemmon-dessert" />
@@ -119,15 +111,14 @@ function Main() {
                           ac leo id,
                         </span>
                       </div>
-                      <p className="delivery">
-                        <img
-                          src={deliveryIcon}
-                          alt="delivery"
-                          className="delivery-icon"
-                        />
-                        Order a delivery
-                      </p>
+                      <p className="delivery">Order a delivery</p>
                     </div>
+                    <div className="delivery-icon">
+                      <img src={deliveryIcon} alt="delivery" />
+                    </div>
+                  </div>
+                  <div className="testimonials">
+                    <div>Testimonials</div>
                   </div>
                 </Row>
               </div>

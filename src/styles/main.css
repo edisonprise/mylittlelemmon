@@ -22,14 +22,14 @@
   h1 {
     font-size: 60px;
     margin-top: 30px;
-    margin-left: 240px;
+    margin-left: 340px;
     margin-bottom: 5px;
     color: #f4ce14;
   }
   
   h2 {
     font-size: 40px;
-    margin-left: 240px;
+    margin-left: 340px;
     color: white;
     margin-top: -10px;
   }
@@ -38,7 +38,7 @@
     margin-top: 10px;
     max-height: 6em;
     overflow-y: auto;
-    margin-left: 240px;
+    margin-left: 340px;
   }
   
   .para {
@@ -56,7 +56,7 @@
     float: right;
     display: block;
     margin-top: -210px;
-    margin-right: 70px;
+    margin-right: 170px;
     }
 
     .reservetable {
@@ -68,7 +68,7 @@
       font: medium;
       color: #333333;
       font-family: "markazi" "sans-serif";
-      margin-left: 240px;
+      margin-left: 340px;
       margin-top: 30px;
       width: 250px;
     }
@@ -79,7 +79,7 @@
 
   .specials {
     font-size: 60px;
-    margin-left: 60px;
+    margin-left: 400px;
     margin-top: 300px;
   }
 
@@ -92,7 +92,7 @@
       font: medium;
       color: #333333;
       font-family: "markazi" "sans-serif";
-      margin-right: 70px;
+      margin-right: 520px;
       margin-top: -70px;
       width: 250px;
       float: right;
@@ -101,18 +101,19 @@
   .card-container {
     display: flex; /* Utiliza flexbox para distribuir las tarjetas horizontalmente */
     justify-content: center; /* Centra los elementos horizontalmente */
+    position:relative;
   }
 
   .card {
     /* Estilos de las tarjetas */
-    margin-right: 120px;
+    margin-right: 100px;
     margin-top: 30px;
     border: none;
     width: 300px;
   }
 
   .card:last-child {
-    margin-right: 0;
+    margin-right: 100px;
   }
 
   .card img {
@@ -132,11 +133,13 @@
     font-weight: bold; /* Añade negrita al nombre para resaltarlo */
     color: #333333;
     margin-bottom: 25px;
+    font-size: large;
   }
 
   .price {
     margin-right: 10px; /* Espacio entre el precio y el nombre */
     color: red;
+    text-align: center;
   }
 
   .description {
@@ -148,13 +151,21 @@
 
  .delivery {
   margin-top: 25px;
+  font-size: large;
  }
 
  .delivery-icon {
-  position: relative;
-  width: 1px; /* Tamaño deseado */
-  height: 1px; /* Mantener la proporción de aspecto */
-  left: 40px;
-  top: 50%;
-  transform: translateY(-50%);
+  position: relative; /* Cambiado de 'relative' a 'absolute' */
+  width: 1vh;
+  height: 1vh;
+  right: 200px; /* Ajusta este valor según sea necesario */
+  top: 100%; /* Ajusta este valor según sea necesario */
+  transform: translateY(-600%); /* Ajusta este valor según sea necesario */
+  margin-right: 2px;
+}
+
+.testimonials {
+  font-size: 60px;
+  margin-top: 200px;
+  text-align: center;
 }
