@@ -5,7 +5,7 @@ import restaurantfood from "../images/restaurantfood.jpg";
 import greeksalad from "../images/greeksalad.jpg";
 import bruschetta from "../images/bruschetta.png";
 import lemondessert from "../images/lemondessert.jpg";
-import deliveryIcon from "../images/delivery.png"
+import deliveryIcon from "../images/delivery.png";
 
 function Main() {
   return (
@@ -56,13 +56,24 @@ function Main() {
                         <span className="price">$10.99</span> {/* Precio */}
                       </div>
                       <div>
-                        <span className="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat dui non quam varius, a fermentum nisl auctor. Donec nec mauris augue. Nam sit amet tellus et est hendrerit lacinia vel eu dui. Fusce justo magna, pellentesque vel viverra nec, dictum at sapien. Proin in diam lacus. In orci mauris, faucibus ac leo id,</span>
+                        <span className="description">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Nam feugiat dui non quam varius, a fermentum
+                          nisl auctor. Donec nec mauris augue. Nam sit amet
+                          tellus et est hendrerit lacinia vel eu dui. Fusce
+                          justo magna, pellentesque vel viverra nec, dictum at
+                          sapien. Proin in diam lacus. In orci mauris, faucibus
+                          ac leo id,
+                        </span>
                       </div>
                       <p className="delivery">
-  <img src={deliveryIcon} alt="delivery" className="delivery-icon" />
-  Order a delivery
-</p>
-
+                        <img
+                          src={deliveryIcon}
+                          alt="delivery"
+                          className="delivery-icon"
+                        />
+                        Order a delivery
+                      </p>
                     </div>
                     <div className="card">
                       <img src={bruschetta} alt="bruscheta" />
@@ -71,28 +82,51 @@ function Main() {
                         <span className="price">$10.99</span> {/* Precio */}
                       </div>
                       <div>
-                        <span className="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat dui non quam varius, a fermentum nisl auctor. Donec nec mauris augue. Nam sit amet tellus et est hendrerit lacinia vel eu dui. Fusce justo magna, pellentesque vel viverra nec, dictum at sapien. Proin in diam lacus. In orci mauris, faucibus ac leo id,</span>
+                        <span className="description">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Nam feugiat dui non quam varius, a fermentum
+                          nisl auctor. Donec nec mauris augue. Nam sit amet
+                          tellus et est hendrerit lacinia vel eu dui. Fusce
+                          justo magna, pellentesque vel viverra nec, dictum at
+                          sapien. Proin in diam lacus. In orci mauris, faucibus
+                          ac leo id,
+                        </span>
                       </div>
                       <p className="delivery">
-  <img src={deliveryIcon} alt="delivery" className="delivery-icon" />
-  Order a delivery
-</p>
-
+                        <img
+                          src={deliveryIcon}
+                          alt="delivery"
+                          className="delivery-icon"
+                        />
+                        Order a delivery
+                      </p>
                     </div>
                     <div className="card">
                       <img src={lemondessert} alt="lemmon-dessert" />
                       <div className="content-below">
-                        <span className="name">Lemon Dessert</span>                        {/* Nombre */}
+                        <span className="name">Lemon Dessert</span>{" "}
+                        {/* Nombre */}
                         <span className="price">$10.99</span> {/* Precio */}
                       </div>
                       <div>
-                        <span className="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat dui non quam varius, a fermentum nisl auctor. Donec nec mauris augue. Nam sit amet tellus et est hendrerit lacinia vel eu dui. Fusce justo magna, pellentesque vel viverra nec, dictum at sapien. Proin in diam lacus. In orci mauris, faucibus ac leo id,</span>
+                        <span className="description">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Nam feugiat dui non quam varius, a fermentum
+                          nisl auctor. Donec nec mauris augue. Nam sit amet
+                          tellus et est hendrerit lacinia vel eu dui. Fusce
+                          justo magna, pellentesque vel viverra nec, dictum at
+                          sapien. Proin in diam lacus. In orci mauris, faucibus
+                          ac leo id,
+                        </span>
                       </div>
                       <p className="delivery">
-  <img src={deliveryIcon} alt="delivery" className="delivery-icon" />
-  Order a delivery
-</p>
-
+                        <img
+                          src={deliveryIcon}
+                          alt="delivery"
+                          className="delivery-icon"
+                        />
+                        Order a delivery
+                      </p>
                     </div>
                   </div>
                 </Row>
