@@ -22,14 +22,14 @@
   h1 {
     font-size: 60px;
     margin-top: 30px;
-    margin-left: 370px;
+    margin-left: 240px;
     margin-bottom: 5px;
     color: #f4ce14;
   }
   
   h2 {
     font-size: 40px;
-    margin-left: 370px;
+    margin-left: 240px;
     color: white;
     margin-top: -10px;
   }
@@ -38,18 +38,123 @@
     margin-top: 10px;
     max-height: 6em;
     overflow-y: auto;
-    margin-left: 370px;
+    margin-left: 240px;
   }
   
   .para {
-    display: -webkit-box; /* Establece el modelo de caja flexible de diseño */
-    -webkit-line-clamp: 6; /* Establece el número máximo de líneas a mostrar */
-    -webkit-box-orient: horizontal; /* Establece la dirección del eje principal */
-    overflow: hidden; /* Oculta el desbordamiento del contenido */
-    text-wrap: wrap;
+  float: left;
+  width: 30em;
+  height: 5em;
+  margin: 3px;
+  padding: 3px;
+  border: black 2px;
   }
   
+  .image{
+    height: 500px;
+    width: 380px;
+    float: right;
+    display: block;
+    margin-top: -210px;
+    margin-right: 70px;
+    }
+
+    .reservetable {
+      background-color: #f4ce14;
+      padding: 20px;
+      border:#f4ce14;
+      border-radius: 15px;
+      display: block;
+      font: medium;
+      color: #333333;
+      font-family: "markazi" "sans-serif";
+      margin-left: 240px;
+      margin-top: 30px;
+      width: 250px;
+    }
+
   .content {
     padding: 20px;
   }
-  
+
+  .specials {
+    font-size: 60px;
+    margin-left: 60px;
+    margin-top: 300px;
+  }
+
+  .online{
+      background-color: #f4ce14;
+      padding: 20px;
+      border:#f4ce14;
+      border-radius: 15px;
+      display: block;
+      font: medium;
+      color: #333333;
+      font-family: "markazi" "sans-serif";
+      margin-right: 70px;
+      margin-top: -70px;
+      width: 250px;
+      float: right;
+  }
+
+  .card-container {
+    display: flex; /* Utiliza flexbox para distribuir las tarjetas horizontalmente */
+    justify-content: center; /* Centra los elementos horizontalmente */
+  }
+
+  .card {
+    /* Estilos de las tarjetas */
+    margin-right: 120px;
+    margin-top: 30px;
+    border: none;
+    width: 300px;
+  }
+
+  .card:last-child {
+    margin-right: 0;
+  }
+
+  .card img {
+    width: 300px; /* Define el ancho deseado */
+    height: 300px; /* Define la altura deseada */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor manteniendo su relación de aspecto */
+  }
+
+  .content-below {
+     text-align: left; /* Centra el contenido horizontalmente */
+     display: flex;
+     justify-content: space-between;
+     margin-top: 40px;
+  }
+
+  .name {
+    font-weight: bold; /* Añade negrita al nombre para resaltarlo */
+    color: #333333;
+    margin-bottom: 25px;
+  }
+
+  .price {
+    margin-right: 10px; /* Espacio entre el precio y el nombre */
+    color: red;
+  }
+
+  .description {
+    font-size: 14px; /* Tamaño de fuente */
+    color: #777; /* Color del texto */
+    margin-top: 25px; /* Espacio superior */
+    text-align: justify; /* Justificar el texto */
+ }
+
+ .delivery {
+  margin-top: 25px;
+ }
+
+ .delivery-icon {
+  position: relative;
+  width: 1px; /* Tamaño deseado */
+  height: 1px; /* Mantener la proporción de aspecto */
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+}
