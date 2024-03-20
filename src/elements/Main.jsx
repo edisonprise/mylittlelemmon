@@ -6,6 +6,7 @@ import greeksalad from "../images/greeksalad.jpg";
 import bruschetta from "../images/bruschetta.png";
 import lemondessert from "../images/lemondessert.jpg";
 import deliveryIcon from "../images/delivery.png";
+import avatar from "../images/user.png";
 
 function Main() {
   return (
@@ -56,7 +57,7 @@ function Main() {
                         <span className="price">$10.99</span> {/* Precio */}
                       </div>
                       <div>
-                        <span className="description">
+                        <div className="description">
                           Lorem ipsum dolor sit amet, consectetur adipiscing
                           elit. Nam feugiat dui non quam varius, a fermentum
                           nisl auctor. Donec nec mauris augue. Nam sit amet
@@ -64,7 +65,7 @@ function Main() {
                           justo magna, pellentesque vel viverra nec, dictum at
                           sapien. Proin in diam lacus. In orci mauris, faucibus
                           ac leo id,
-                        </span>
+                        </div>
                       </div>
                       <p className="delivery">Order a delivery</p>
                     </div>
@@ -78,7 +79,7 @@ function Main() {
                         <span className="price">$10.99</span> {/* Precio */}
                       </div>
                       <div>
-                        <span className="description">
+                        <div className="description">
                           Lorem ipsum dolor sit amet, consectetur adipiscing
                           elit. Nam feugiat dui non quam varius, a fermentum
                           nisl auctor. Donec nec mauris augue. Nam sit amet
@@ -86,7 +87,7 @@ function Main() {
                           justo magna, pellentesque vel viverra nec, dictum at
                           sapien. Proin in diam lacus. In orci mauris, faucibus
                           ac leo id,
-                        </span>
+                        </div>
                       </div>
                       <p className="delivery">Order a delivery</p>
                     </div>
@@ -101,7 +102,7 @@ function Main() {
                         <span className="price">$10.99</span> {/* Precio */}
                       </div>
                       <div>
-                        <span className="description">
+                        <div className="description">
                           Lorem ipsum dolor sit amet, consectetur adipiscing
                           elit. Nam feugiat dui non quam varius, a fermentum
                           nisl auctor. Donec nec mauris augue. Nam sit amet
@@ -109,7 +110,7 @@ function Main() {
                           justo magna, pellentesque vel viverra nec, dictum at
                           sapien. Proin in diam lacus. In orci mauris, faucibus
                           ac leo id,
-                        </span>
+                        </div>
                       </div>
                       <p className="delivery">Order a delivery</p>
                     </div>
@@ -117,10 +118,69 @@ function Main() {
                       <img src={deliveryIcon} alt="delivery" />
                     </div>
                   </div>
-                  <div className="testimonials">
-                    <div>Testimonials</div>
-                  </div>
                 </Row>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+        <Container fluid>
+          <Col>
+            <div className="testim-card">
+              <div className="testimonials">
+                <div>Testimonials</div>
+              </div>
+            </div>
+          </Col>
+          <Col>
+            <div className="avatar-container">
+              <div className="avatar-box">
+                <img src={avatar} alt="user-avatar" />
+                <div className="below">
+                  <div className="name">Name:</div>
+                  <div className="rating">Rating:</div>
+                </div>
+              </div>
+              <div className="avatar-box">
+                <img src={avatar} alt="user-avatar" />
+                <div className="below">
+                  <div className="name">Name:</div>
+                  <div className="rating">Rating:</div>
+                </div>
+              </div>
+              <div className="avatar-box">
+                <img src={avatar} alt="user-avatar" />
+                <div className="below">
+                  <div className="name">Name:</div>
+                  <div className="rating">Rating:</div>
+                </div>
+              </div>
+              <div className="avatar-box">
+                <img src={avatar} alt="user-avatar" />
+                <div className="below">
+                  <div className="name">Name:</div>
+                  <div className="rating">Rating:</div>
+                </div>
+              </div>
+            </div>
+          </Col>
+        </Container>
+        <Container fluid>
+          <Row>
+            <Col className="chicago">
+              <h1>Little Lemon</h1>
+              <h2>Chicago</h2>
+              <div className="para-container1">
+                <p className="para">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                  auctor, mauris sit amet bibendum facilisis, magna lorem
+                  posuere odio, in convallis metus nisi laoreet arcu. Sed
+                  venenatis placerat justo sed pretium. Ut vel augue eu odio
+                  ullamcorper efficitur in a lorem. Nunc sed neque vel enim
+                  euismod semper vel sit amet dolor. Sed hendrerit imperdiet
+                  malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit. Phasellus enim risus, lobortis sit amet ligula eget,
+                  posuere accumsan mauris.
+                </p>
               </div>
             </Col>
           </Row>
