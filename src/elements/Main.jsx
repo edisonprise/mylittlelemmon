@@ -7,6 +7,8 @@ import bruschetta from "../images/bruschetta.png";
 import lemondessert from "../images/lemondessert.jpg";
 import deliveryIcon from "../images/delivery.png";
 import avatar from "../images/user.png";
+import chicago from "../images/chicago.jpg";
+import restaurant from "../images/restaurant.png";
 
 function Main() {
   return (
@@ -181,6 +183,10 @@ function Main() {
                   elit. Phasellus enim risus, lobortis sit amet ligula eget,
                   posuere accumsan mauris.
                 </p>
+                <div class="image-container">
+                  <img src={restaurant} alt="Imagen 1" class="imagen1" />
+                  <img src={chicago} alt="Imagen 2" class="imagen2" />
+                </div>
               </div>
             </Col>
           </Row>
