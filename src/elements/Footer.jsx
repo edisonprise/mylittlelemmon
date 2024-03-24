@@ -1,8 +1,10 @@
 import React from "react";
+import "../styles/footer.css";
+
 
 function Footer() {
   return (
-    <footer>
+    <div>
       <div className="footer-container">
         <div className="footer-left">
           <h3>About Us</h3>
@@ -52,7 +54,7 @@ function Footer() {
           Reserved.
         </p>
       </div>
-    </footer>
+    </div>
   );
 }
 

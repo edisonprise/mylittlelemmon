@@ -1,4 +1,4 @@
-//import "./App.css";
+import React from "react";
 import { Helmet } from "react-helmet";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col } from "react-bootstrap";
@@ -12,7 +12,7 @@ function App() {
       <Helmet>
         <meta
           name="description"
-          content="Web application that provides options to book tables and show the dishes and services in the traditional mediterranean restauran my little lemon"
+          content="Web application that provides options to book tables and show the dishes and services in the traditional mediterranean restaurant My Little Lemon"
         />
         <meta name="og:title" content="My Little Lemon" />
         <meta
@@ -21,7 +21,7 @@ function App() {
         />
         <meta
           name="og:image"
-          content="The image of the restaurant My little lemon is a yellow little lemon that represents the simplicity but richness of the mediterranean food that is offered in the restaurant My little lemon"
+          content="The image of the restaurant My Little Lemon is a yellow little lemon that represents the simplicity but richness of the mediterranean food that is offered in the restaurant My Little Lemon"
         />
       </Helmet>
       <Container fluid>
