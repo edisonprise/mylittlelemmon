@@ -1,0 +1,28 @@
+.booking-form {
+    text-align: center;
+    padding: 20px;
+    background-color: #edefee;
+  }
+  
+  .booking-form label {
+    color: #495e57;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .booking-form input[type="date"],
+  .booking-form select {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .booking-form input[type="submit"] {
+    margin-top: 20px;
+    background-color: #f4ce14;
+    color: #333333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
