@@ -1,7 +1,12 @@
 .booking-form {
+    display:grid;
+    flex-direction: column;
     text-align: center;
     padding: 20px;
     background-color: #edefee;
+    left: 50%; /* Centra horizontalmente */
+  top: 20%; 
+    position: absolute;
   }
   
   .booking-form label {
@@ -25,4 +30,3 @@
     border-radius: 5px;
     cursor: pointer;
   }
-  

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useReducer, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "../styles/main.css";
 import restaurantfood from "../images/restaurantfood.jpg";
@@ -9,17 +9,30 @@ import deliveryIcon from "../images/delivery.png";
 import avatar from "../images/user.png";
 import chicago from "../images/chicago.jpg";
 import restaurant from "../images/restaurant.png";
-import { BookingForm } from "./BookingForm";
+import BookingForm from "./BookingForm";
 
 function Main() {
-  const [availableTimes, setAvailableTimes] = useState([
-    "17:00",
-    "18:00",
-    "19:00",
-    "20:00",
-    "21:00",
-    "22:00",
-  ]);
+  const timesReducer = (state, action) => {
+    switch (action.type) {
+      case "UPDATE_TIMES":
+        // Aquí puedes implementar la lógica para actualizar los horarios basados en la fecha seleccionada
+        // Por ahora, simplemente devolveremos la lista original de horarios
+        return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+      default:
+        return state;
+    }
+  };
+
+  const initializeTimes = () => {
+    // Esta función podría ser útil si necesitas inicializar los horarios de alguna manera específica
+    return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+  };
+
+  const [timesState, dispatch] = useReducer(timesReducer, [], initializeTimes);
+
+  const updateTimes = (date) => {
+    dispatch({ type: "UPDATE_TIMES", payload: date });
+  };
 
   return (
     <div className="main-container">
@@ -51,10 +64,6 @@ function Main() {
               <button className="reservetable">Reserve a table</button>
             </Col>
           </Row>
-          <BookingForm
-            availableTimes={availableTimes}
-            setAvailableTimes={setAvailableTimes}
-          />
         </Container>
       </div>
       <div className="content">
@@ -197,9 +206,9 @@ function Main() {
                   elit. Phasellus enim risus, lobortis sit amet ligula eget,
                   posuere accumsan mauris.
                 </p>
-                <div class="image-container">
-                  <img src={restaurant} alt="Imagen 1" class="imagen1" />
-                  <img src={chicago} alt="Imagen 2" class="imagen2" />
+                <div className="image-container">
+                  <img src={restaurant} alt="Imagen 1" className="imagen1" />
+                  <img src={chicago} alt="Imagen 2" className="imagen2" />
                 </div>
               </div>
             </Col>

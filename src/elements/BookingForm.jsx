@@ -1,13 +1,24 @@
 import React, { useState } from "react";
 import "../styles/booking.css";
 
-export const BookingForm = ({ availableTimes, setAvailableTimes }) => {
-  const [date, setDate] = useState("");
+const BookingForm = ({ timesState, dispatch }) => {
+  const [date] = useState("");
   const [time, setTime] = useState(
-    availableTimes.length > 0 ? availableTimes[0] : ""
+    timesState && timesState.length > 0 ? timesState[0] : ""
   );
-  const [guests, setGuests] = useState("1");
+  const [guests, setGuests] = useState("5");
   const [occasion, setOccasion] = useState("birthday");
+
+  const handleDateChange = (e) => {
+    const selectedDate = e.target.value;
+    // Dispatch para actualizar los horarios basados en la fecha seleccionada
+    dispatch({ type: "UPDATE_TIMES", payload: selectedDate });
+
+    // Limpiar el tiempo si los horarios no están disponibles para la fecha seleccionada
+    if (!timesState || !timesState.length) {
+      setTime("12/11/2012");
+    }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,17 +32,18 @@ export const BookingForm = ({ availableTimes, setAvailableTimes }) => {
         type="date"
         id="res-date"
         value={date}
-        onChange={(e) => setDate(e.target.value)}
+        onChange={handleDateChange}
       />
       <label htmlFor="res-time">Choose time</label>
       <select
-        id="res-time "
+        id="res-time"
         value={time}
         onChange={(e) => setTime(e.target.value)}
       >
-        {availableTimes.map((timeOption, index) => (
-          <option key={index}>{timeOption}</option>
-        ))}
+        {Array.isArray(timesState) &&
+          timesState.map((timeOption, index) => (
+            <option key={index}>{timeOption}</option>
+          ))}
       </select>
       <label htmlFor="guests">Number of guests</label>
       <input
