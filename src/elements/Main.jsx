@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "../styles/main.css";
 import restaurantfood from "../images/restaurantfood.jpg";
@@ -9,8 +9,18 @@ import deliveryIcon from "../images/delivery.png";
 import avatar from "../images/user.png";
 import chicago from "../images/chicago.jpg";
 import restaurant from "../images/restaurant.png";
+import { BookingForm } from "./BookingForm";
 
 function Main() {
+  const [availableTimes, setAvailableTimes] = useState([
+    "17:00",
+    "18:00",
+    "19:00",
+    "20:00",
+    "21:00",
+    "22:00",
+  ]);
+
   return (
     <div className="main-container">
       <div className="background">
@@ -41,6 +51,10 @@ function Main() {
               <button className="reservetable">Reserve a table</button>
             </Col>
           </Row>
+          <BookingForm
+            availableTimes={availableTimes}
+            setAvailableTimes={setAvailableTimes}
+          />
         </Container>
       </div>
       <div className="content">

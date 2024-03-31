@@ -1,15 +1,17 @@
 import React, { useState } from "react";
-import styles from "../styles/booking.css";
+import "../styles/booking.css";
 
-export const BookingForm = () => {
+export const BookingForm = ({ availableTimes, setAvailableTimes }) => {
   const [date, setDate] = useState("");
-  const [time, setTime] = useState("17:00");
+  const [time, setTime] = useState(
+    availableTimes.length > 0 ? availableTimes[0] : ""
+  );
   const [guests, setGuests] = useState("1");
   const [occasion, setOccasion] = useState("birthday");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Formulario enviado");
+    console.log("Form submitted:", { date, time, guests, occasion });
   };
 
   return (
@@ -27,12 +29,9 @@ export const BookingForm = () => {
         value={time}
         onChange={(e) => setTime(e.target.value)}
       >
-        <option>17:00</option>
-        <option>18:00</option>
-        <option>19:00</option>
-        <option>20:00</option>
-        <option>21:00</option>
-        <option>22:00</option>
+        {availableTimes.map((timeOption, index) => (
+          <option key={index}>{timeOption}</option>
+        ))}
       </select>
       <label htmlFor="guests">Number of guests</label>
       <input
@@ -57,3 +56,5 @@ export const BookingForm = () => {
     </form>
   );
 };
+
+export default BookingForm;
