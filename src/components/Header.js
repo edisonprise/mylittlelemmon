@@ -3,9 +3,9 @@ import Nav from "../elements/Nav";
 
 const Header = () => {
   return (
-    <div>
+    <header role="banner">
       <Nav />
-    </div>
+    </header>
   );
 };
 

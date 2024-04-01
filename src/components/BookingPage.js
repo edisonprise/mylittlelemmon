@@ -24,10 +24,12 @@ const BookingPage = () => {
     dispatch({ type: "UPDATE_TIMES", payload: date });
   };
   return (
-    <BookingForm
-      timesState={timesState} // Pasamos el estado timesState al componente BookingForm
-      dispatch={dispatch} // Pasamos la función dispatch al componente BookingForm
-    />
+    <div data-testid="booking-page">
+      <BookingForm
+        timesState={timesState} // Pasamos el estado timesState al componente BookingForm
+        dispatch={dispatch} // Pasamos la función dispatch al componente BookingForm
+      />
+    </div>
   );
 };
 
