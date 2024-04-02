@@ -1,24 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/booking.css";
 
 const BookingForm = ({ timesState, dispatch }) => {
-  const [date] = useState("");
-  const [time, setTime] = useState(
-    timesState && timesState.length > 0 ? timesState[0] : ""
-  );
+  const [date, setDate] = useState(""); // Estado para la fecha seleccionada
+  const [time, setTime] = useState(""); // Estado para el tiempo seleccionado
   const [guests, setGuests] = useState("5");
   const [occasion, setOccasion] = useState("birthday");
 
+  // Manejar cambios en la fecha seleccionada
   const handleDateChange = (e) => {
     const selectedDate = e.target.value;
-    // Dispatch para actualizar los horarios basados en la fecha seleccionada
     dispatch({ type: "UPDATE_TIMES", payload: selectedDate });
-
-    // Limpiar el tiempo si los horarios no están disponibles para la fecha seleccionada
-    if (!timesState || !timesState.length) {
-      setTime("12/11/2012");
-    }
   };
+  // Actualizar el estado del tiempo cuando cambian los horarios disponibles
+  useEffect(() => {
+    if (timesState && timesState.length > 0) {
+      setTime(timesState[0]); // Establecer el primer horario disponible como valor predeterminado
+    }
+  }, [timesState]); // Ejecutar cuando cambia la lista de horarios disponibles
 
   const handleSubmit = (e) => {
     e.preventDefault();

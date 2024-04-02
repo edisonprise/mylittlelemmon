@@ -26,10 +26,10 @@ export const initializeTimes = () => {
   return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
 };
 function Main() {
-  const [timesState, dispatch] = useReducer(timesReducer, [], initializeTimes);
+  const [timesState, dispatch] = useReducer(timesReducer, []);
 
   const updateTimes = (date) => {
-    dispatch({ type: "UPDATE_TIMES", payload: date });
+    dispatch({ type: "UPDATE_TIMES" });
   };
 
   return (

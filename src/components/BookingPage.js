@@ -1,34 +1,43 @@
-import React, { useReducer } from "react";
+// BookingPage.js
+
+// Importamos useEffect y useState
+import React, { useReducer, useEffect } from "react";
 import BookingForm from "../elements/BookingForm";
+import { fetchAPI } from "../api";
 
 const BookingPage = () => {
   const timesReducer = (state, action) => {
     switch (action.type) {
-      case "UPDATE_TIMES":
-        // Aquí puedes implementar la lógica para actualizar los horarios basados en la fecha seleccionada
-        // Por ahora, simplemente devolveremos la lista original de horarios
-        return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+      case "SET_TIMES":
+        return action.payload; // Actualiza el estado con los horarios recibidos
       default:
         return state;
     }
   };
 
-  const initializeTimes = () => {
-    // Esta función podría ser útil si necesitas inicializar los horarios de alguna manera específica
-    return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+  // Inicializamos timesState con un array vacío
+  const [timesState, dispatch] = useReducer(timesReducer, []);
+
+  // Función para inicializar los horarios
+  const initializeTimes = async () => {
+    try {
+      const today = new Date(); // Obtener la fecha actual
+      const response = await fetchAPI(today); // Obtener los horarios disponibles para hoy
+      dispatch({ type: "SET_TIMES", payload: response }); // Actualizar el estado con los horarios recibidos
+    } catch (error) {
+      console.error("Error fetching initial times:", error);
+      // Manejar el error
+    }
   };
 
-  const [timesState, dispatch] = useReducer(timesReducer, [], initializeTimes);
+  // Llamamos a initializeTimes cuando el componente se monta
+  useEffect(() => {
+    initializeTimes();
+  }, []);
 
-  const updateTimes = (date) => {
-    dispatch({ type: "UPDATE_TIMES", payload: date });
-  };
   return (
     <div data-testid="booking-page">
-      <BookingForm
-        timesState={timesState} // Pasamos el estado timesState al componente BookingForm
-        dispatch={dispatch} // Pasamos la función dispatch al componente BookingForm
-      />
+      <BookingForm timesState={timesState} dispatch={dispatch} />
     </div>
   );
 };
