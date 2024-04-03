@@ -1,9 +1,10 @@
 // BookingPage.js
 
 // Importamos useEffect y useState
-import React, { useReducer, useEffect } from "react";
+import React, { useReducer, useEffect, useState  } from "react";
 import BookingForm from "../elements/BookingForm";
 import { fetchAPI } from "../api";
+import ConfirmedBooking from "../elements/ConfirmedBooking";
 
 const BookingPage = () => {
   const timesReducer = (state, action) => {
@@ -17,6 +18,7 @@ const BookingPage = () => {
 
   // Inicializamos timesState con un array vacío
   const [timesState, dispatch] = useReducer(timesReducer, []);
+  const [bookingConfirmed, setBookingConfirmed] = useState(false);
 
   // Función para inicializar los horarios
   const initializeTimes = async () => {
@@ -35,10 +37,25 @@ const BookingPage = () => {
     initializeTimes();
   }, []);
 
+  // Function to handle booking confirmation
+  const handleBookingConfirmation = () => {
+    setBookingConfirmed(true);
+  };
+
   return (
     <div data-testid="booking-page">
-      <BookingForm timesState={timesState} dispatch={dispatch} />
+      {/* Conditional rendering based on booking confirmation */}
+      {bookingConfirmed ? (
+        <ConfirmedBooking />
+      ) : (
+        <BookingForm
+          timesState={timesState}
+          dispatch={dispatch}
+          onBookingConfirm={handleBookingConfirmation} // Pass the confirmation handler to the BookingForm
+        />
+      )}
     </div>
+    
   );
 };
 

@@ -1,7 +1,7 @@
 // api.js
 
 // Simulación de datos de horarios disponibles para la fecha especificada
-const availableTimesData = {
+export const availableTimesData = {
   "2024-03-16": ["10:00", "12:00", "14:00", "16:00"],
   "2024-03-17": ["11:00", "13:00", "15:00", "17:00"],
   // Otros datos de horarios disponibles para diferentes fechas
