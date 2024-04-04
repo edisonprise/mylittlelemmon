@@ -79,4 +79,3 @@ const BookingForm = ({ timesState, dispatch, onBookingConfirm }) => {
 };
 
 export default BookingForm;
-

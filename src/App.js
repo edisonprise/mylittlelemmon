@@ -8,7 +8,6 @@ import Main from "./components/Main.js";
 import Footer from "./components/Footer.js";
 import BookingPage from "./components/BookingPage.js";
 
-
 function App() {
   return (
     <Router>

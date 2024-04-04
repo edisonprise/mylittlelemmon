@@ -1,7 +1,7 @@
 // BookingPage.js
 
 // Importamos useEffect y useState
-import React, { useReducer, useEffect, useState  } from "react";
+import React, { useReducer, useEffect, useState } from "react";
 import BookingForm from "../elements/BookingForm";
 import { fetchAPI } from "../api";
 import ConfirmedBooking from "../elements/ConfirmedBooking";
@@ -55,7 +55,6 @@ const BookingPage = () => {
         />
       )}
     </div>
-    
   );
 };
 
